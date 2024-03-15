@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="/static/Frontend/Design/main.css">
+    <link rel="stylesheet" href="/static/Frontend/Design/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="/static/Frontend/designs/Logo_Iconos/icons8-factura-64.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content-header">
+        <header class="header">
+            <h1>
+                Welcome, let's get to work.
+            </h1>
+            <div>
+                <img src="/static/Frontend/designs/Logo_Iconos/360_197_1.jpg" alt="">
+            </div>
+        </header>
+    </div>
+    <main class="main">
+        <div class="historial complete" onclick="window.location.href='/static/Frontend/html/history.html'">
+            <img class="gif-image" src="/static/Frontend/designs/Img_reserva/filtrar faturas-0000.jpg" data-gif="/static/Frontend/designs/gif/filtrar faturas.gif" data-static="/static/Frontend/designs/Img_reserva/filtrar faturas-0000.jpg" alt="Consultar historial de facturas">
+            <p>Consutar historial</p>
+        </div>
+        <div class="control complete" onclick="window.location.href='/static/Frontend/html/main.html'">
+            <img class="gif-image" src="/static/Frontend/designs/Img_reserva/obteneer facturas-0000.jpg" data-gif="/static/Frontend/designs/gif/obteneer facturas.gif" data-static="/static/Frontend/designs/Img_reserva/obteneer facturas-0000.jpg" alt="Control de la Correspondencia">
+            <p>Control Correspondencia</p>
+        </div>
+        <div class="rut complete" >
+            <img class="gif-image" src="/static/Frontend/designs/Img_reserva/rut-0000.jpg" data-gif="/static/Frontend/designs/gif/rut.gif" data-static="/static/Frontend/designs/Img_reserva/rut-0000.jpg" alt="Consultar RUT">
+            <p>Consutar RUT</p>
+        </div>
+        <div class="informe complete">
+            <img class="gif-image" src="/static/Frontend/designs/Img_reserva/informe-0000.jpg" data-gif="/static/Frontend/designs/gif/informe.gif" data-static="/static/Frontend/designs/Img_reserva/informe-0000.jpg" alt="Informe de los diferentes estatus">
+            <p>¿Como va esto?</p>
+        </div>
+        <div class="status complete">
+            <img class="gif-image" src="/static/Frontend/designs/Img_reserva/status-0000.jpg" data-gif="/static/Frontend/designs/gif/status.gif" data-static="/static/Frontend/designs/Img_reserva/status-0000.jpg" alt="Status de los procesos">
+            <p>Estatus de distribución</p>
+        </div>
+        <div class="update complete">
+            <img class="gif-image" src="/static/Frontend/designs/Img_reserva/base de datos-0000.jpg" data-gif="/static/Frontend/designs/gif/base de datos.gif" data-static="/static/Frontend/designs/Img_reserva/base de datos-0000.jpg" alt="Carpeta con responsables">
+            <p>Información importante</p>
+        </div>
+        <button onclick="handleSignoutClick()" class="start">
+            Sign Out
+        </button>
+        <button class="start-right">
+            Contac Support
+        </button>
+    </main>   
+    <footer class="footer">
+        <div>
+            <p>
+                By Andres Felipe Cristancho O.
+            </p>
+        </div>
+        <div class="samcol">
+            <p>
+                SAMCOL 
+            </p>
+           <img src="/static/Frontend/designs/Logo_Iconos/icons8-colombia-48.png" alt="">
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="/static/Backend/modules/authorize.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+    <script>
+        // Cambia las img a gif
+        window.onload = function() {
+            var divs = document.querySelectorAll('.complete');
+            divs.forEach(function(div) {
+                var image = div.querySelector('.gif-image');
+                div.onmouseover = function() {
+                    image.src = image.getAttribute('data-gif');
+                };
+                div.onmouseout = function() {
+                    image.src = image.getAttribute('data-static');
+                };
+            });
+        };
+
+        document.querySelector('.start-right').addEventListener('click', function() {
+            window.location.href = 'support.html';
+          });
+    </script>     
+</body>
+</html>

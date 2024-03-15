@@ -1,0 +1,187 @@
+.popup  {
+    width: 25%;
+    background-color: #fdfdfe;
+    height: 75vh;
+    border-radius: 20px;
+    display: none;
+    margin-top: -5%;
+    margin-left: 38%;
+    margin-right: 38%;
+}
+.popup img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.nav {
+    width: 100%;
+    height: 15%;
+    display: block;
+}
+.nav .button {
+    background-color: #1229a3;
+    width: 40%;
+    height: 60%;
+    border-radius: 10px;
+    color: #fdfdfe;
+    border: none; 
+    display: block;
+    margin: 0 auto;
+}
+.nav p {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.overlay {
+    display: none;
+    position: fixed; /* Posiciona el overlay en relación con la ventana del navegador */
+    top: 0; /* Alinea el overlay con el borde superior de la página */
+    left: 0; /* Alinea el overlay con el borde izquierdo de la página */
+    width: 100%; /* Asegura que el overlay cubra todo el ancho de la página */
+    height: 100%; /* Asegura que el overlay cubra todo el alto de la página */
+    background-color: rgba(0, 0, 0, 0.699); /* Color de fondo negro con 50% de opacidad */
+    z-index: 1; /* Asegura que el overlay esté debajo de la ventana modal */
+    opacity: 0; /* Hace que el overlay sea inicialmente invisible */
+    transition: opacity 0.01s; /* Hace que la opacidad del overlay cambie gradualmente en 2 segundos */
+}
+
+.popup {
+    position: fixed; /* Posiciona la ventana modal en relación con su posición normal */
+    z-index: 2; /* Asegura que la ventana modal esté encima del overlay */
+    /* El resto de tus estilos... */
+    opacity: 0; /* Hace que la ventana modal sea inicialmente invisible */
+    transition: opacity 0.01s; /* Hace que la opacidad de la ventana modal cambie gradualmente en 2 segundos */
+}
+
+@keyframes scaling {
+    0%{
+        transform: scale(0.25);
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+.popup {
+    /* El resto de tus estilos... */
+    animation: scaling 1s; /* Aplica la animación al elemento */
+}
+
+.main {
+    display: grid;
+    height: 65vh;
+    grid-template: repeat(2, 1fr) / repeat(20, 1fr) ;
+    gap: 35px;
+    margin-top: -2%;
+}
+.complete:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+}
+.historial {
+    grid-column: 4/8;
+    grid-row: 1;
+}
+.control {
+    grid-column: 9/13;
+    grid-row: 1;
+}
+.rut {
+    grid-column: 14/18;
+    grid-row: 1;
+}
+.informe {
+    grid-column: 4/8;
+    grid-row: 2;
+}
+.status {
+    grid-column: 9/13;
+    grid-row: 2;
+}
+.update {
+    grid-column: 14/18;
+    grid-row: 2;
+}
+.main img {
+    padding-top: 8%;
+    width: 20vh;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20%;
+}
+
+.main div {
+    border-radius: 50%;
+    width: 88%;
+    height: 100%;
+    background-color: #ffffff;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    transition-duration: 1s;
+    
+}
+.main p {
+    text-align: center;
+    font-size: 10px;
+    padding-bottom: 5%;
+    font-family: 'Fira Sans', sans-serif;
+}
+.start {
+    position: absolute;
+    padding: 1%;
+    text-align: center;
+    top: 43%;
+    width: 4vh;
+    height: 20vh;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #1229a3;
+    color: #fdfdfe;
+    border: none;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.start:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    color: #1229a3;
+    border: solid 1px;
+}
+
+.start-right {
+    position: absolute;
+    padding: 1%;
+    text-align: center;
+    top: 43%;
+    right: 0; /* Alinea el botón a la derecha */
+    width: 4vh;
+    height: 25vh;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #1229a3;
+    color: #fdfdfe;
+    border: none;
+    border-bottom-right-radius: 12px; /* Ajusta el radio de la esquina inferior derecha */
+    border-top-right-radius: 12px; /* Ajusta el radio de la esquina superior derecha */
+}
+
+.start-right:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    color: #1229a3;
+    border: solid 1px;
+}

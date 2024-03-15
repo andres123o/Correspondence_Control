@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correspondence Control</title>
+    <link rel="stylesheet" href="/static/Frontend/Design/main.css">
+    <link rel="preconnect" href="/https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="/static/Frontend/Design/table.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/Frontend/designs/Logo_Iconos/icons8-factura-64.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content-header">
+        <header class="header">
+            <h1>
+                Correspondence Control
+            </h1>
+            <div>
+                <img src="/static/Frontend/designs/Logo_Iconos/360_197_1.jpg" alt="">
+            </div>
+        </header>
+        <nav class="nav">
+            
+            <button class="buton" id="cargarDatos" ">Obtain Info</button>
+            <button class="buton" id="sendInvoices">Send Invoices</button>
+            <button class="buton" id="saveData">Save data</button>
+           
+
+        </nav>
+        <div class="total">
+            <p>
+                Total Facturas:
+            </p>
+            <p id="TotalFacturas">
+
+            </p>
+        </div>
+    </div>
+    <div class="modal-empty">   
+        <img src="/static/Frontend/designs/Img_reserva/ilustracion-concepto-tiempo-trabajo_114360-1074-removebg-preview.png" alt="">
+        <div class="notice-contemt">
+            <p class="notice">
+                There are  
+            </p>
+            <p id="cantidad" class="notice">
+    
+            </p>
+            <p class="notice">
+                invoices available</p>
+        </div>
+        <p class="press">
+            Press the button to obtain
+        </p>
+    </div>
+    <section class="section">
+        <div id="content-table" class="content-table">
+            <table border="1" id="table">
+                <thead>
+                    <tr>
+                        <th>
+                            NIT
+                        </th>
+                        <th>
+                            Vendor
+                        </th>
+                        <th>
+                            No. Invoce
+                        </th>
+                        <th>
+                            Issue Date
+                        </th>
+                        <th>
+                            Kind
+                        </th>
+                        <th>
+                            Valor
+                        </th>
+                        <th>
+                            RD Date
+                        </th>
+                        <th>
+                            Unique Code
+                        </th>
+                        <th>
+                            DV Analyst
+                        </th>
+                        <th>
+                            PDF
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <div class="modal" id="modal">
+        <img src="/static/Frontend/designs/Img_reserva/icons8-cuenta-verificada-96.png" alt="Check-list">
+        <p>
+            Successful delivery
+        </p>
+    </div>
+    <footer class="footer">
+        <div>
+            <p>
+                By Andres Felipe Cristancho O.
+            </p>
+        </div>
+        <div class="samcol">
+            <p>
+                SAMCOL 
+            </p>
+           <img src="/static/Frontend/designs/Logo_Iconos/icons8-colombia-48.png" alt="">
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script> 
+    <script src="/static/Backend/modules/authorize.js"></script> 
+    
+    
+    <script src="/static/Backend/modules/sendDataB.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>    
+
+    <script src="/static/Backend/modules/unZip.js"></script>
+
+    <script src="/static/Frontend/modules/getDataF.js"></script>
+    <script src="/static/Frontend/modules/sendDataF.js"></script>
+
+    <script src="/static/Frontend/modules/saveDataF.js"></script>
+
+
+    <script src="/static/Backend/modules/getDataB.js"></script>
+</body>
+</html>

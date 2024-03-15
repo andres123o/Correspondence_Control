@@ -1,0 +1,18 @@
+.modal-empty3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 60vh;
+}
+.modal-empty3 img {
+    width: 60vh;
+}
+.p-modal {
+    display: flex;
+}
+.p-modal div {
+    width: 5vh;
+} 

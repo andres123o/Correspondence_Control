@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="/static/Frontend/Design/main.css">
+    <link rel="stylesheet" href="/static/Frontend/Design/index.css">
+    <link rel="stylesheet" href="/static/Frontend/Design/history.css">
+    <link rel="stylesheet" href="/static/Frontend/Design/table.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="/static/Frontend/designs/Logo_Iconos/icons8-factura-64.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content-header2">
+        <header class="header">
+            <h1>
+                Check the history.
+            </h1>
+            <div>
+                <img src="/static/Frontend/designs/Logo_Iconos/360_197_1.jpg" alt="">
+            </div>
+        </header>
+        <p class="info">
+            Select an item to perform the best search.
+        </p>
+    </div>
+    <nav class="nav2">
+        <div class="search">
+            <div class="desplegable">
+                Select item
+                <div class="dropdown-content">
+                    <a id="company_id" href="#">NIT</a>
+                    <a id="registration_name" href="#">Vendor name</a>
+                    <a id="eo" href="#">Purchase Order</a>
+                    <a id="parent_id" href="#">No. Invoice</a>
+                    <a id="value" href="#">Value</a>
+                </div>
+            </div>
+        </div>
+        <div class="back" id="back">
+            <img src="/static/Frontend/designs/Logo_Iconos/icons8-izquierda-círculo-24.png" alt="">
+        </div>
+        <div class="search-box">
+            <form action="">
+              <input type="text" placeholder="Ingresa el número.." name="search">
+              <button type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="modal-empty2">   
+        <img id="img-modal" src="/static/Frontend/designs/Img_reserva/history.png" alt="">
+        <div class="notice-contemt">
+            <p class="notice">
+                Don't worry, everything is here
+            </p>
+        </div>
+        <p class="press">
+            Press the button to obtain history
+        </p>
+    </div>
+    <section class="section2">
+        <div id="content-table" class="content-table2">
+            <table border="1" id="table" class="table2">
+                <thead>
+                    <tr>
+                        <th>
+                            NIT
+                        </th>
+                        <th>
+                            Vendor
+                        </th>
+                        <th>
+                            No. Invoce
+                        </th>
+                        <th>
+                            Issue Date
+                        </th>
+                        <th>
+                            Kind
+                        </th>
+                        <th>
+                            Valor
+                        </th>
+                        <th>
+                            Date sent
+                        </th>
+                        <th>
+                            Unique Code
+                        </th>
+                        <th>
+                            DV Analyst
+                        </th>
+                        <th>
+                            PDF
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer class="footer">
+        <div>
+            <p>
+                By Andres Felipe Cristancho O.
+            </p>
+        </div>
+        <div class="samcol">
+            <p>
+                SAMCOL 
+            </p>
+           <img src="/static/Frontend/designs/Logo_Iconos/icons8-colombia-48.png" alt="">
+        </div>
+    </footer>
+    <script src="/static/Frontend/modules/historyF.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+.nav {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#zipFileInput {
+    display: none;
+}
+
+/* Estiliza el botón */
+.buton {
+    padding: 10px;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+    background-color: #1229a3;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.buton:hover {
+    transform: scale(1.1);
+    background-color: #2e45b9;
+}
+#sendInvoices {
+    display: none;
+}
+table {
+    border-collapse: collapse; /* Fusionar bordes de celdas */
+    width: 100%; /* Opcional: establecer el ancho de la tabla */
+}
+
+th, td {
+    border: 1px solid black; /* Agregar un borde a las celdas */
+    padding: 8px; /* Espaciado interno para el contenido */
+    text-align: left; /* Alineación del texto en las celdas */
+}
+.content-table {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+}
+.section {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px; /* Ajusta según el alto del pie de página */
+    max-height: calc(95vh - 180px); /* Ajusta según el alto del encabezado y la barra de navegación */
+    overflow-y: auto;
+    overflow-x: auto;
+    margin-top: 50px;
+    font-family: 'Oswald', sans-serif;
+    display: none;
+    transition-duration: 0.5s;
+}
+.total {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    padding-left: 80px;
+    margin-top: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    display: flex;
+}
+.total p {
+    margin-right: 10px;
+}
+#TotalFacturas {
+    font-weight: 700;
+}
+#results-body {
+    font-size: 13px;
+}
+.modal-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 60vh;
+}
+.modal-empty img {
+    width: 50vh;
+}
+.notice {
+    font-family: 'Fira Sans', sans-serif;
+    margin-bottom: 2%;
+    padding: 0.5%;
+    font-size: 30px;
+    font-weight: 600;
+}
+#cantidad {
+    color: #1229a3;
+}
+.press {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: -1%;
+}
+.modal {
+    position: fixed;
+    width: 15%;
+    height: 30%;
+    background-color: #00000086;
+    top: 30%;
+    left: 42.5%;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20%;
+    transition-duration: 4s;
+}
+
+@keyframes scaling {
+    0%{
+        transform: scale(0.25);
+    }
+    25% {
+        transform: scale(1)
+    } 50% {
+        transform: scale(0.25);
+    } 100% {
+        transform: scale(1);
+    }
+}
+
+.modal img {
+    /* El resto de tus estilos... */
+    animation: scaling 3s; /* Aplica la animación al elemento */
+    display: block;
+    margin: 0 auto
+}
+.modal p {
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+}
+#saveData {
+    display: none;
+}
+.notice-contemt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
